@@ -19,6 +19,9 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 
 const Home = () => {
     const router = useRouter();
+    const launchTimestamp = 1773597600000;
+    const now = Date.now();
+    const isLive = launchTimestamp < now;
     return (
         <>
             {/* HeroSection */}
@@ -40,7 +43,7 @@ const Home = () => {
                         <CircleIcon
                             sx={{
                                 fontSize: 14,
-                                color: orange[500],
+                                color: isLive ? green[400] : orange[500],
                                 "@keyframes BlinkingCircle": {
                                     "0%": { opacity: 0 },
                                     "50%": { opacity: 1 },
@@ -50,7 +53,7 @@ const Home = () => {
                             }}
                         />
                         <Typography color={grey[50]} fontSize={16}>
-                            FLEX is live on Tesnet.
+                            {!isLive ? "Launching March 15 — 18:00 UTC" : "FLEX is live on BSC"}
                         </Typography>
                     </Box>
                 </Grid>
