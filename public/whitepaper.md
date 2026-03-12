@@ -470,7 +470,7 @@ The team is not obligated to provide 100% of the raised funds as liquidity. Liqu
 
 Holding at least one bFLEX token at the moment of stake creation grants a staking bonus by reducing the effective share price used in the staking share calculation.
 
-This results in twice as many base staking shares for the same FLEX amount compared to a stake created without holding bFLEX.
+This results in five times more base staking shares for the same FLEX amount compared to a stake created without holding bFLEX.
 
 ### Important properties of the bFLEX bonus:
 
@@ -557,9 +557,9 @@ In simple terms, shares reflect how much FLEX is staked, for how long, and under
 
 - bFLEX Bonus
 
-    If the staking address holds at least one bFLEX token at the moment the stake is created, the effective share price used in the calculation is reduced by 50%.
+    If the staking address holds at least one bFLEX token at the moment the stake is created, the effective share price used in the calculation is reduced by 80%.
 
-    This results in twice as many base shares for the same FLEX amount. This bonus is evaluated only at stake creation and never changes afterward.
+    This produces five times more base shares for the same FLEX amount. This bonus is evaluated only at stake creation and never changes afterward.
 
 
 - Irrevocable Bonus
@@ -571,7 +571,7 @@ Final Share Intuition
 All bonuses apply multiplicatively. Conceptually, the final share amount behaves as:
 
 ```text
-finalShares = (base shares) × (duration bonus) × (2× if bFLEX is held) × (1.25× if irrevocable)
+finalShares = (base shares) × (duration bonus) × (5× if bFLEX is held) × (1.25× if irrevocable)
 ```
 
 As a result, two stakes with the same FLEX amount can earn vastly different rewards depending on duration, bFLEX usage, and revocability.
